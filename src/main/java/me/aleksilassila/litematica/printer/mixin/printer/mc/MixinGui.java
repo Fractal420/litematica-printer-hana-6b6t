@@ -12,20 +12,21 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 //#endif
 
+//#if MC >= 260100
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+//#elseif MC > 11904
+//$$ import net.minecraft.client.gui.GuiGraphics;
+//#endif
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 //#if MC <= 11904
-//$$import com.mojang.blaze3d.vertex.PoseStack;
+//$$ import com.mojang.blaze3d.vertex.PoseStack;
 //#elseif MC > 12006
 import net.minecraft.client.DeltaTracker;
-//#endif
-
-//#if MC < 260000
-//$$ import net.minecraft.client.gui.GuiGraphics;
 //#endif
 
 //#if MC >= 260200
@@ -35,19 +36,17 @@ import net.minecraft.client.DeltaTracker;
 //#endif
 public abstract class MixinGui {
 
-    //#if MC >= 260200
+    //#if MC >= 260100
     @Inject(method = "extractRenderState", at = @At("TAIL"))
-    //#elseif MC >= 260100
-    //$$ @Inject(method = "extractRenderState", at = @At("TAIL"))
-    //#else
-    //$$ @Inject(method = "render", at = @At("TAIL"))
-    //#endif
-
-    //#if MC > 12006
     private void hookRenderHud(GuiGraphicsExtractor guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
+    //#elseif MC > 12006
+    //$$ @Inject(method = "render", at = @At("TAIL"))
+    //$$ private void hookRenderHud(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
     //#elseif MC > 11904
+    //$$ @Inject(method = "render", at = @At("TAIL"))
     //$$ private void hookRenderHud(GuiGraphics guiGraphics, float f, CallbackInfo ci) {
     //#else
+    //$$ @Inject(method = "render", at = @At("TAIL"))
     //$$ private void hookRenderHud(PoseStack poseStack, float f, CallbackInfo ci) {
     //#endif
         Minecraft mc = Minecraft.getInstance();
@@ -81,9 +80,12 @@ public abstract class MixinGui {
         }
     }
 
-    //#if MC > 12006
-    @Inject(method = "renderCrosshair", at = @At("HEAD"), cancellable = true)
+    //#if MC >= 260100
+    @Inject(method = "extractCrosshair", at = @At("HEAD"), cancellable = true)
     private void litematicaPrinter$hideVanillaCrosshair(GuiGraphicsExtractor guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
+    //#elseif MC > 12006
+    //$$ @Inject(method = "renderCrosshair", at = @At("HEAD"), cancellable = true)
+    //$$ private void litematicaPrinter$hideVanillaCrosshair(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
     //#elseif MC > 11904
     //$$ @Inject(method = "renderCrosshair", at = @At("HEAD"), cancellable = true)
     //$$ private void litematicaPrinter$hideVanillaCrosshair(GuiGraphics guiGraphics, CallbackInfo ci) {
