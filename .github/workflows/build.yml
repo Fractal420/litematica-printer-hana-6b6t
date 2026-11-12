@@ -100,7 +100,7 @@ jobs:
         if: >-
           github.event_name == 'push' &&
           github.ref == 'refs/heads/master' &&
-          github.repository == 'Yur1Ca/litematica-printer'
+          github.repository == 'litematica-printer-hana-6b6t'
         shell: bash
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}

@@ -566,7 +566,7 @@ public class Render2D {
     }
 
     private static String hud(String key, Object... args) {
-        return StringUtils.translatable("litematica-printer.hud." + key, args).getString();
+        return StringUtils.translatable("litematica-printer-hana-6b6t.hud." + key, args).getString();
     }
 
     private static double clamp(double value, double min, double max) {

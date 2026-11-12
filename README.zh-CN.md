@@ -1,4 +1,4 @@
-# Litematica Printer — Hana
+# Litematica Printer — Hana 6b6t
 
 [English](README.md) | **简体中文**
 
@@ -7,7 +7,7 @@
 [![GitHub release](https://img.shields.io/github/v/release/Yur1Ca/litematica-printer?include_prereleases&label=GitHub)](https://github.com/Yur1Ca/litematica-printer/releases)
 [![License](https://img.shields.io/github/license/Yur1Ca/litematica-printer)](LICENSE.md)
 
-Litematica Printer — Hana 是一个客户端 Fabric 模组，为 Litematica 添加自动还原投影的能力。它会在玩家周围自动放置正确的方块，并提供填充、排流体、挖掘、破基岩、物品管理等辅助功能。
+Litematica Printer — Hana 6b6t（由 Fractal42O 为 6b6t 社区制作）是一个客户端 Fabric 模组，为 Litematica 添加自动还原投影的能力。它会在玩家周围自动放置正确的方块，并提供填充、排流体、挖掘、破基岩、物品管理等辅助功能。
 
 这是在多个 Litematica Printer 分支基础上继续维护的独立版本，包含重写的破基岩流程、扫描器与迭代器优化，以及更多建造功能。
 

@@ -1,16 +1,16 @@
-# Litematica Printer — Hana TGP
+# Litematica Printer — Hana 6b6t
 
 **Made especially for the 6b6t anarchy server — [6b6t.org](https://6b6t.org)**  
-Built in the name of **TGP — The Project Group** for the 6b6t community, as a tool to help make our server look even more awesome than it already is.  
+Project by **Fractal42O** for the 6b6t community, as a tool to help with building and make our server look even more awesome than it already is.  
 Anyone is welcome to use it — it works on other servers too.
 
 A client-side Fabric mod that adds reliable automated schematic building to Litematica.  
 It restores schematics by placing the correct blocks around the player and also provides filling, fluid removal, mining, bedrock breaking, inventory assistance, and related utilities.
 
 This fork is based on **[Litematica Printer — Hana](https://github.com/Yur1Ca/litematica-printer)** by Yur1Ca.  
-Hana is an excellent continuation of earlier printer work. I forked it because I wanted to ship certain fixes and features quickly, in my own way, without waiting for upstream timing — especially improvements that make the printer more resilient on laggy / rate-limited anarchy servers like 6b6t.
+Hana is an excellent continuation of earlier printer work. It was forked to ship certain fixes and features quickly, in a way tuned for laggy / rate-limited anarchy servers like 6b6t.
 
-The entire mod has been translated to English as the default language. This makes development easier for me and also avoids configuration / translation conflicts with the original Hana printer when both are present.
+The entire mod has been translated to English as the default language. This makes development easier and also avoids configuration / translation conflicts with the original Hana printer when both are present.
 
 Huge thanks to **Yur1Ca** for the outstanding work on Hana — this project would not exist without it.
 
@@ -18,12 +18,10 @@ Huge thanks to **Yur1Ca** for the outstanding work on Hana — this project woul
 
 ## Download
 
-- **[GitHub Releases](https://github.com/Fractal420/litematica-printer-hana-TGP/releases)** — recommended. Standalone JARs per Minecraft version + multi-version builds.
-- Current version naming follows the pattern `Hana-TGP-Vx` (e.g. `Hana-TGP-V6`).
+- Standalone JARs per Minecraft version + multi-version builds.
+- Current version naming follows the pattern `Hana-6b6t-Vx` (e.g. `Hana-6b6t-V6.2`).
 
-There is currently no Modrinth page for this fork. Use the GitHub releases only.
-
-**Important:** If you previously used original Hana, delete the old config file and start with the new defaults the first time you launch this fork. The defaults are tuned differently (especially for server-revert recovery).
+**Important:** If you previously used original Hana or an earlier TGP build, delete the old config file and start with the new defaults the first time you launch this version. The defaults are tuned differently (especially for server-revert recovery).
 
 ---
 
@@ -224,7 +222,7 @@ The first build downloads Minecraft and mod dependencies and requires a working 
 
 ## Support and contributing
 
-- Use [GitHub Issues](https://github.com/Fractal420/litematica-printer-hana-TGP/issues) for reproducible bugs, block support problems, and concrete feature requests.
+- Report reproducible bugs, block support problems, and concrete feature requests via the project issues.
 - Search existing issues before opening a new report.
 - Keep one independently reproducible problem per issue and attach `latest.log`, crash reports, screenshots, or short recordings where relevant.
 

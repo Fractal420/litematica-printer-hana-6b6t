@@ -14,13 +14,13 @@ import java.util.List;
 
 public class Reference {
     public static final Minecraft MINECRAFT = Minecraft.getInstance();
-    public static final String MOD_ID = "litematica-printer";
-    public static final String MOD_NAME = "Litematica Printer";
+    public static final String MOD_ID = "litematica-printer-hana-6b6t";
+    public static final String MOD_NAME = "Litematica Printer Hana 6b6t";
     public static final String VERSION = FabricLoader.getInstance()
             .getModContainer(MOD_ID)
             .map(container -> container.getMetadata().getVersion().getFriendlyString())
             .orElse("unknown");
-    public static final String GUI_TITLE = MOD_NAME + " - Hana - " + displayBuildVersion(VERSION);
+    public static final String GUI_TITLE = MOD_NAME + " - " + displayBuildVersion(VERSION);
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     private static String displayBuildVersion(String version) {

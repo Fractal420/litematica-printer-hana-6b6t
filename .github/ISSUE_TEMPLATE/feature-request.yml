@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Explain the problem you want to solve rather than only describing a button or toggle. Early ideas can be discussed in [Discussions](https://github.com/Yur1Ca/litematica-printer/discussions) first.
+        Explain the problem you want to solve rather than only describing a button or toggle. Early ideas can be discussed in [Discussions](#) first.
 
   - type: checkboxes
     id: preflight

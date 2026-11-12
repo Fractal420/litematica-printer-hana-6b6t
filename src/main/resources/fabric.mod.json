@@ -2,10 +2,11 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${mod_version}",
-  "icon": "assets/litematica-printer/icon.png",
+  "icon": "assets/litematica-printer-hana-6b6t/icon.png",
   "name": "${mod_name}",
-  "description": "An extension for Litematica that adds the missing printer functionality.",
+  "description": "An extension for Litematica that adds the missing printer functionality. Made by Fractal42O for the 6b6t community.",
   "authors": [
+    "Fractal42O",
     "aleksilassila",
     "zhaixianyu",
     "BlinkWhite",
@@ -47,4 +48,3 @@
     }
   }
 }
-

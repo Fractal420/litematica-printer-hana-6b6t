@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for reporting an issue. Use this template for reproducible bugs.
 
-        For installation help, configuration questions, server limitations, or general discussion, use [Discussions](https://github.com/Yur1Ca/litematica-printer/discussions). Please report only one independently reproducible issue per Issue.
+        For installation help, configuration questions, server limitations, or general discussion, use [Discussions](#). Please report only one independently reproducible issue per Issue.
 
   - type: checkboxes
     id: preflight

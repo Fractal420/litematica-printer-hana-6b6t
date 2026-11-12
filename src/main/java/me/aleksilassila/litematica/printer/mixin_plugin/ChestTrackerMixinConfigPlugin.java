@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 public final class ChestTrackerMixinConfigPlugin implements IMixinConfigPlugin {
-    private static final Logger LOGGER = LoggerFactory.getLogger("litematica-printer");
+    private static final Logger LOGGER = LoggerFactory.getLogger("litematica-printer-hana-6b6t");
     private static final String PREFIX =
             "me.aleksilassila.litematica.printer.mixin.printer.chesttracker.";
     private boolean loaded;

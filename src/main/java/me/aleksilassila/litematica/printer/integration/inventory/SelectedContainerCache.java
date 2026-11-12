@@ -19,7 +19,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 final class SelectedContainerCache {
-    private static final Path FILE = Paths.get("config", "litematica-printer-container-cache.json");
+    private static final Path FILE = Paths.get("config", "litematica-printer-hana-6b6t-container-cache.json");
     private final Set<Entry> entries = new LinkedHashSet<>();
     private boolean loaded;
 

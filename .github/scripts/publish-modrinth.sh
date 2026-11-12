@@ -7,7 +7,7 @@ MODRINTH_PROJECT_ID="${MODRINTH_PROJECT_ID:-nriQwbvD}"
 MODRINTH_FILE_DIR="${MODRINTH_FILE_DIR:-fabricWrapper/build/libs}"
 MODRINTH_GAME_VERSIONS="${MODRINTH_GAME_VERSIONS:-[\"1.18.2\",\"1.19.4\",\"1.20.1\",\"1.20.2\",\"1.20.4\",\"1.20.6\",\"1.21\",\"1.21.1\",\"1.21.2\",\"1.21.3\",\"1.21.4\",\"1.21.5\",\"1.21.6\",\"1.21.7\",\"1.21.8\",\"1.21.9\",\"1.21.10\",\"1.21.11\",\"26.1\",\"26.1.1\",\"26.1.2\",\"26.2\"]}"
 MODRINTH_DRY_RUN="${MODRINTH_DRY_RUN:-false}"
-MODRINTH_REPOSITORY="${MODRINTH_REPOSITORY:-Yur1Ca/litematica-printer}"
+MODRINTH_REPOSITORY="${MODRINTH_REPOSITORY:-litematica-printer-hana-6b6t}"
 
 : "${MODRINTH_VERSION_TYPE:?MODRINTH_VERSION_TYPE must be alpha or beta}"
 
@@ -27,7 +27,7 @@ fi
 
 mapfile -t wrapper_jars < <(
   find "$MODRINTH_FILE_DIR" -maxdepth 1 -type f \
-    -name 'litematica-printer-*.jar' \
+    -name 'litematica-printer-hana-6b6t-*.jar' \
     ! -name '*-sources.jar' \
     ! -name '*-dev.jar' \
     ! -name '*-shadow.jar' \
@@ -42,7 +42,7 @@ fi
 
 wrapper_jar="${wrapper_jars[0]}"
 filename="$(basename "$wrapper_jar")"
-artifact_version="${filename#litematica-printer-}"
+artifact_version="${filename#litematica-printer-hana-6b6t-}"
 artifact_version="${artifact_version%.jar}"
 
 if [[ -z "$artifact_version" || "$artifact_version" == "$filename" ]]; then
@@ -59,7 +59,7 @@ esac
 
 # Keep the downloadable filename short, while giving Modrinth a stable,
 # human-readable title that is independent of the Minecraft base version.
-version_number="${MODRINTH_VERSION_NUMBER:-Hana-${display_version}}"
+version_number="${MODRINTH_VERSION_NUMBER:-Hana-6b6t-${display_version}}"
 version_name="${MODRINTH_VERSION_NAME:-Litematica-Printer}"
 if [[ -n "${MODRINTH_CHANGELOG:-}" ]]; then
   changelog="$MODRINTH_CHANGELOG"
@@ -115,7 +115,7 @@ if [[ "$MODRINTH_DRY_RUN" == "true" ]]; then
   exit 0
 fi
 
-user_agent="Yur1Ca/litematica-printer GitHub Actions (https://github.com/Yur1Ca/litematica-printer)"
+user_agent="litematica-printer-hana-6b6t GitHub Actions"
 existing_versions="$({
   curl --fail-with-body --silent --show-error \
     --header "Authorization: $MODRINTH_TOKEN" \
